@@ -6,6 +6,13 @@ def main
 
   raise unless actual == expected
 
+  input = '(test)'
+  output = ['test']
+
+  actual = SExpressionParser.new.parse(input)
+
+  raise unless actual == output
+
   return if ARGV.empty?
 
   s_expression = SExpressionParser.new.parse(ARGF.read)
