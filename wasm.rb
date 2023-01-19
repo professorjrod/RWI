@@ -38,15 +38,23 @@ class SExpressionParser
     if can_read?(/\(/)
       expressions = []
       read(/\(/)
-      expressions << parse_expression
+      loop do
+        break if can_read?(/\)/)
+
+        expressions << parse_expression
+      end
       read(/\)/)
       expressions
     else
-      read(/[^)]+/)
+      parse_atom
     end
   end
 
   private
+
+  def parse_atom
+    read(/[^)]+/)
+  end
 
   def can_read?(pattern)
     /\A#{pattern}/.match?(string)
