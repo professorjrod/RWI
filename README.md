@@ -3,7 +3,7 @@ Ruby WASM Interpreter
 
 Project Goals
 
-- Implement a parser for the WebAssembly binary format, which will allow you to read and interpret the instructions contained in a WebAssembly module.
+- Implement a parser for the WebAssembly binary format, which will allow reading and interpreting the instructions contained in a WebAssembly module.
 
 - Implement a virtual machine or interpreter that will execute the instructions contained in the WebAssembly module. This will involve writing code to handle the different types of instructions and operands defined in the specification.
 
