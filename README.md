@@ -10,3 +10,6 @@ Project Goals
 - Test the interpreter by running a variety of WebAssembly modules and comparing the results to the expected output.
 
 - Once the interpreter is working correctly, you can begin adding additional features and functionality, such as support for WebAssembly's memory and threading features.
+
+
+1.0 Specification: https://github.com/WebAssembly/spec
