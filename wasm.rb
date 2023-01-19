@@ -39,6 +39,7 @@ class SExpressionParser
       expressions = []
       read(/\(/)
       loop do
+        skip_whitespace
         break if can_read?(/\)/)
 
         expressions << parse_expression
@@ -52,8 +53,14 @@ class SExpressionParser
 
   private
 
+  def skip_whitespace
+    return unless can_read?(%r{ +})
+
+    read(%r{ +})
+  end
+
   def parse_atom
-    read(/[^)]+/)
+    read(/[^) ]+/)
   end
 
   def can_read?(pattern)
