@@ -19,13 +19,14 @@ def main
   pp s_expression
 end
 
-# Parse through using string using Regexp and return a tree of SExpressions
+# Parse through using string using Regexp
 class SExpressionParser
   def parse(string)
     self.string = string
     parse_expression
   end
 
+  # Uses regexp to find opening parentheses, and adds to array. Once finds closing parentheses, it returns the array.
   def parse_expression
     if can_read?(/\(/)
       expressions = []
@@ -44,6 +45,7 @@ class SExpressionParser
     /\A#{pattern}/.match?(string)
   end
 
+  # Uses regexp to match a pattern, sets the currently interpreted string to the remainder of the string that isn't matched, and returns the matched string.
   def read(pattern)
     match = /\A#{pattern}/.match(string) or raise "Expected #{pattern} but got #{string}"
     self.string = match.post_match
