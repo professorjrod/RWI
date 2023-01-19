@@ -52,10 +52,6 @@ class SExpressionParser
 
   private
 
-  def parse_atom
-    read(/[^)]+/)
-  end
-
   def can_read?(pattern)
     /\A#{pattern}/.match?(string)
   end
