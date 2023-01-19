@@ -13,6 +13,13 @@ def main
 
   raise actual.inspect unless actual == output
 
+  input = '(test case)'
+  output = %w[test case]
+
+  actual = SExpressionParser.new.parse(input)
+
+  raise actual.inspect unless actual == output
+
   return if ARGV.empty?
 
   s_expression = SExpressionParser.new.parse(ARGF.read)
