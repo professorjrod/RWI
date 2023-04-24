@@ -1,6 +1,9 @@
 # RWI
 Ruby WASM Interpreter
 
+Current Progress:
+Data is being parsed into SExpressions 
+
 Project Goals
 
 - Implement a parser for the WebAssembly binary format, which will allow reading and interpreting the instructions contained in a WebAssembly module. I think the best route is to convert the WASM to S-Expressions
