@@ -6,9 +6,9 @@ Data is being parsed into SExpressions
 
 Project Goals
 
-- Implement a parser for the WebAssembly binary format, which will allow reading and interpreting the instructions contained in a WebAssembly module. I think the best route is to convert the WASM to S-Expressions
+- Implement a parser for the WebAssembly binary format, which will allow reading and interpreting the instructions contained in a WebAssembly module. The method I have chosen is to convert the WASM to S-Expressions.
 
-- Implement a virtual machine or interpreter that will execute the instructions contained in the WebAssembly module. This will involve writing code to handle the different types of instructions and operands defined in the specification.
+- Implement an interpreter that will execute the instructions contained in the WebAssembly module. This will involve writing code to handle the different types of instructions and operands defined in the specification.
 
 - Test the interpreter by running a variety of WebAssembly modules and comparing the results to the expected output.
 
